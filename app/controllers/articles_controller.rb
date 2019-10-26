@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
+    # Se ejecuta antes
     before_action :find_article, except: [:new, :create, :index] #only: [:show, :edit, :update, :destroy]
-    # after_action # se ejecuta despues, el contrario de before_action
+    # after_action # se ejecuta despues
 
     def index
         @article = Article.all
